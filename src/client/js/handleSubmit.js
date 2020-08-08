@@ -90,7 +90,7 @@ async function getImage(city) {
 //  post function
 async function postProjectData(projectData) {
 
-    const url = "https://travel-planner2020.herokuapp.com/postProjectData";
+    const url = "http://localhost:8081/postProjectData";
 
     const response = await fetch(url, {
         method: "POST",
@@ -166,5 +166,6 @@ function dynamicUpdateUI(data) {
 
 export {
     handleSubmit,
-    responsesSection
+    responsesSection,
+    getCityCoordinates,
 }
