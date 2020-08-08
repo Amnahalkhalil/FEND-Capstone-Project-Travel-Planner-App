@@ -1,3 +1,5 @@
+let PORT = process.env.PORT || 8081;
+
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
 
@@ -24,13 +26,13 @@ app.use(express.static("dist"));
 
 // Setup Server
 
-var port = process.env.PORT || 8081;
 const server = app.listen(port, listening);
 
 // Listening function
-function listening() {
-    console.log(`Running on port: ${port}`);
-}
+app.listen(PORT, function () {
+    console.log("http://localhost:" + PORT);
+});
+
 
 // GET route setup to return the JS object created projectData
 app.get("/", getData);
