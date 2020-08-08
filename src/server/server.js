@@ -24,7 +24,7 @@ app.use(express.static("dist"));
 
 // Setup Server
 
-var port = process.env.port || 8081;
+var port = process.env.PORT || 8081;
 const server = app.listen(port, listening);
 
 // Listening function
