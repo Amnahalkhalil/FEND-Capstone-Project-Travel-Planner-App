@@ -54,7 +54,7 @@ function handleSubmit(event) {
 // Function to get Coordinates of city from geoNames
 async function getCityCoordinates(city) {
     const geoNamesUrl = `//api.geonames.org/searchJSON?q=${city}&maxRows=10&username=${geoNamesApiKey}`;
-    const response = await fetch(geoNamesUrl);
+    const response = await fetch(geoNamesUrl, { mode: 'cors' });
     try {
         let data = await response.json();
         return data;
@@ -66,7 +66,7 @@ async function getCityCoordinates(city) {
 //Async function to get weather from WeatherBit
 async function getWeatherOfCity(latitude, longitude, date) {
     const forecastUrl = `//api.weatherbit.io/v2.0/forecast/daily?lat=${latitude}&lon=${longitude}&key=${weatherBitApiKey}`;
-    const response = await fetch(forecastUrl)
+    const response = await fetch(forecastUrl, { mode: 'cors' })
     try {
         let data = await response.json();
         return data;
@@ -78,7 +78,7 @@ async function getWeatherOfCity(latitude, longitude, date) {
 // Async function to get data from Pixabay
 async function getImage(city) {
     const PixaBayApiUrl = `//pixabay.com/api/?key=${pixaBayApiKey}&q=${city}&image_type=photo`;
-    const response = await fetch(PixaBayApiUrl)
+    const response = await fetch(PixaBayApiUrl, { mode: 'cors' })
     try {
         let data = await response.json();
         return data;
@@ -94,6 +94,7 @@ async function postProjectData(projectData) {
 
     const response = await fetch(url, {
         method: "POST",
+        mode: 'cors',
         credentials: "same-origin",
         headers: {
             "Content-Type": "application/json"
