@@ -53,7 +53,7 @@ function handleSubmit(event) {
 
 // Function to get Coordinates of city from geoNames
 async function getCityCoordinates(city) {
-    const geoNamesUrl = `https://api.geonames.org/searchJSON?q=${city}&maxRows=10&username=${geoNamesApiKey}`;
+    const geoNamesUrl = `https://secure.geonames.org/searchJSON?q=${city}&maxRows=10&username=${geoNamesApiKey}`;
     const response = await fetch(geoNamesUrl, { mode: 'cors' });
     try {
         let data = await response.json();
