@@ -53,7 +53,7 @@ function handleSubmit(event) {
 
 // Function to get Coordinates of city from geoNames
 async function getCityCoordinates(city) {
-    const geoNamesUrl = `//api.geonames.org/searchJSON?q=${city}&maxRows=10&username=${geoNamesApiKey}`;
+    const geoNamesUrl = `https://api.geonames.org/searchJSON?q=${city}&maxRows=10&username=${geoNamesApiKey}`;
     const response = await fetch(geoNamesUrl, { mode: 'cors' });
     try {
         let data = await response.json();
@@ -65,7 +65,7 @@ async function getCityCoordinates(city) {
 
 //Async function to get weather from WeatherBit
 async function getWeatherOfCity(latitude, longitude, date) {
-    const forecastUrl = `//api.weatherbit.io/v2.0/forecast/daily?lat=${latitude}&lon=${longitude}&key=${weatherBitApiKey}`;
+    const forecastUrl = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${latitude}&lon=${longitude}&key=${weatherBitApiKey}`;
     const response = await fetch(forecastUrl, { mode: 'cors' })
     try {
         let data = await response.json();
@@ -77,7 +77,7 @@ async function getWeatherOfCity(latitude, longitude, date) {
 
 // Async function to get data from Pixabay
 async function getImage(city) {
-    const PixaBayApiUrl = `//pixabay.com/api/?key=${pixaBayApiKey}&q=${city}&image_type=photo`;
+    const PixaBayApiUrl = `https://pixabay.com/api/?key=${pixaBayApiKey}&q=${city}&image_type=photo`;
     const response = await fetch(PixaBayApiUrl, { mode: 'cors' })
     try {
         let data = await response.json();
@@ -90,7 +90,7 @@ async function getImage(city) {
 //  post function
 async function postProjectData(projectData) {
 
-    const url = "//travel-planner2020.herokuapp.com/postProjectData";
+    const url = "https://travel-planner2020.herokuapp.com/postProjectData";
 
     const response = await fetch(url, {
         method: "POST",
@@ -127,12 +127,12 @@ function getCityImage(imageUrl) {
 //Function to get the contery flag
 function getConteryFlag(countryCode) {
 
-    countryFlags.setAttribute("src", `//www.countryflags.io/${countryCode}/flat/64.png`);
+    countryFlags.setAttribute("src", `https://www.countryflags.io/${countryCode}/flat/64.png`);
 }
 
 //Function to get the weather icon
 function getWeatherIcon(weatherCodeIcon) {
-    weatherIcon.setAttribute("src", `//www.weatherbit.io/static/img/icons/${weatherCodeIcon}.png`);
+    weatherIcon.setAttribute("src", `https://www.weatherbit.io/static/img/icons/${weatherCodeIcon}.png`);
 }
 
 // Function to update UI
