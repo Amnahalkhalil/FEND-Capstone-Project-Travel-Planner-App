@@ -1,0 +1,227 @@
+body {
+    
+    background-image: 
+    linear-gradient(0deg, #0b5886b0 1%, rgba(184, 227, 252, 9.1) 100%),
+    url("../img/travling.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    //overflow: hidden;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+span{
+    font-size: 20px;
+}
+
+span.bold{
+    font-size: 20px;
+    font-weight: bold;
+}
+mark {
+    display: inline-block;
+    line-height: 0em;
+    padding-bottom: 0.5em;
+    background-color: #f7a800;
+    color: #f8f9fa;
+}
+
+mark.title{
+    display: inline-block;
+    line-height: 0em;
+    padding-bottom: 0.5em;
+    background-color: #f7a800;
+    color: #0b5886;
+}
+
+/*
+mark.text{
+    display: inline-block;
+    line-height: 0em;
+    padding-bottom: 0.5em;
+    background-color: #f8f9fa;
+    color: #0b5886;
+}
+*/
+
+h1{
+    text-align: center;
+    padding: 5%;
+    color: #0b5886;
+    font-size: 4.5rem;
+    font-weight: 900; 
+}
+
+form{
+    padding: 0% 10% 0 10%;
+}
+
+footer {
+    padding: 0.5px;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background-color:#0b4e780d;
+    color: white;
+    text-align:center;
+}
+
+input{
+    margin-bottom: 1em;
+}
+
+img#cityImage{
+    width: 400px;
+    float: left;
+}
+
+#mainDetails{
+    float: left;
+    /* margin: 5%; */
+    text-align: center;
+    margin: 20px;
+}
+
+/*section#responsesSection {
+    padding: 10%;
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+    color: #f8f9fa;
+    font-size: 14px;
+}*/
+
+#countryFlags{
+    height: 30px;
+}
+
+#weatherIcon{
+    height: 30px;
+}
+
+#temperature{
+    font-size: 60px;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.footer-heart{
+    text-align:center;
+    font-family: open sans, sans-serif;
+    padding: 10px;
+}
+
+/*#weather{
+    display: block;
+}*/
+
+#tripDetails{
+    margin-left: 20px;
+    text-align: center;
+}
+
+.footer-heart a{
+    color: #f8f9fa;
+    padding-bottom: .25em; 
+    text-decoration: none;
+}
+
+.footer-heart a:hover{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23FAFFF6' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20%;
+    border-bottom: 24px;
+    text-decoration: none;
+}
+
+.emoji{
+    vertical-align: middle;
+}
+.flex-container {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+    @media only screen and (max-width: 900px) {
+
+        .form-control{
+            font-size: 5px;
+
+        }
+        .btn-lg, .btn-group-lg>.btn {
+            /* padding: 0.5rem 1rem; */
+            font-size: 14px;
+            line-height: 1.5;
+            /* border-radius: 0.3rem; */
+        }
+        img#destinationPhoto {
+            width: 200px;
+            float: left;
+        }
+        span{
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .flex-container {
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+    }
