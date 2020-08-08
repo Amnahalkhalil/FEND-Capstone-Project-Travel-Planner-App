@@ -90,7 +90,7 @@ async function getImage(city) {
 //  post function
 async function postProjectData(projectData) {
 
-    const url = "http://localhost:3000/postProjectData";
+    const url = "/postProjectData";
 
     const response = await fetch(url, {
         method: "POST",
