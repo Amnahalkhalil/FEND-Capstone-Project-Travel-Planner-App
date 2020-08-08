@@ -26,8 +26,6 @@ app.use(express.static("dist"));
 
 // Setup Server
 
-const server = app.listen(port, listening);
-
 // Listening function
 app.listen(PORT, function () {
     console.log("http://localhost:" + PORT);
