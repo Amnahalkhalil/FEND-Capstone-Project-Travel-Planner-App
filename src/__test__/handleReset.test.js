@@ -1,4 +1,4 @@
-import { handleReset } from "../client/js/handleReset.js"
+import { handleReset } from "../client/js/handleReset"
 
 
 test("handleReset should return true", async () => {

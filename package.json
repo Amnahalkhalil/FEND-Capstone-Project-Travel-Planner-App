@@ -2,7 +2,8 @@
   "name": "travelapp",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest",
+    "test": "jest --no-cache --verbose",
+    "clear_jest": "jest --clearCache",
     "start": "node src/server/server.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
@@ -35,6 +36,7 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
+    "supertest": "^4.0.2",
     "url-loader": "^4.1.0",
     "webpack-dev-server": "^3.11.0",
     "workbox-webpack-plugin": "^5.1.3"

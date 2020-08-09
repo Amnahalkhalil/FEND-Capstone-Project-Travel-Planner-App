@@ -1,7 +1,8 @@
 let PORT = process.env.PORT || 8081;
+const supertest = require("supertest");
 
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+const projectData = {};
 
 // Require Express to run server and routes
 const express = require("express");
@@ -11,7 +12,7 @@ const bodyParser = require("body-parser");
 
 // Start up an instance of app
 const app = express();
-
+const request = supertest(app);
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -40,6 +41,11 @@ function getData(req, res) {
     res.status(200).send("dist/index.html");
 }
 
+app.get('/test', async (req, res) => {
+    res.json({ message: 'pass!' })
+})
+
+
 // POST route setup to add an entry to the project endpoint
 
 app.post("/postProjectData", addData);
@@ -58,3 +64,5 @@ function addData(req, res) {
     projectData["weatherIcon"] = newData.weatherIcon;
     res.send(projectData);
 }
+
+module.exports = app;

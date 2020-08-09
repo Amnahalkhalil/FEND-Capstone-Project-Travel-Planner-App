@@ -142,7 +142,6 @@ function dynamicUpdateUI(data) {
     let myTripToCity = document.querySelector("#myTripToCity");
     let myTripToCountry = document.querySelector("#myTripToCountry");
     let countryFlags = document.querySelector("#countryflags");
-    let city = document.querySelector("#city");
     let dateOfDeparting = document.querySelector("#dateOfDeparting");
     let daysAway = document.querySelector("#daysAway");
     let maxTemp = document.querySelector("#maxTemp");
@@ -155,7 +154,6 @@ function dynamicUpdateUI(data) {
     myTripToCountry.innerHTML = data.countryName;
     getConteryFlag(data.countryCode);
     dateOfDeparting.innerHTML = data.dateOfDeparting;
-    city.innerHTML = data.toCity;
     daysAway.innerHTML = data.daysAway;
     maxTemp.innerHTML = data.maxTemp;
     minTemp.innerHTML = data.minTemp;
