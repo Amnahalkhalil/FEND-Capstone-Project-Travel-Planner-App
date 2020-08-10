@@ -33,7 +33,7 @@ For dev env run `npm run build-dev`
 
 ## How it works
 
-![how to use the website](rundemo.gif)
+![how to use the website](Demorun.gif)
 
 ## Online demo hosted on Heroku
 
