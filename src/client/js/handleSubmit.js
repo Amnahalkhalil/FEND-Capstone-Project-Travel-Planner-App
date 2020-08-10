@@ -77,7 +77,7 @@ async function getWeatherOfCity(latitude, longitude, date) {
 
 // Async function to get data from Pixabay
 async function getImage(city) {
-    const PixaBayApiUrl = `https://pixabay.com/api/?key=${pixaBayApiKey}&q=${city}&image_type=photo`;
+    const PixaBayApiUrl = `https://pixabay.com/api/?key=${pixaBayApiKey}&q=${city}&category=places&image_type=photo`;
     const response = await fetch(PixaBayApiUrl, { mode: 'cors' })
     try {
         let data = await response.json();
