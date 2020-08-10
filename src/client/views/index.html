@@ -20,10 +20,12 @@
                         required>
                 </div>
                 <div class="col">
+                    <!-- use onfocus type date to showing placeholder-->
                     <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')"
                         id="dateOfdeparting" placeholder="When you are leaving?" required>
                 </div>
                 <div class="col">
+                    <!-- use onfocus type date to showing placeholder-->
                     <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control"
                         id="dateOfReturning" placeholder="When you are returning back?" required>
                 </div>
@@ -84,7 +86,7 @@
     <script>
         // Check that service workers are supported
         if ('serviceWorker' in navigator) {
-            //Use the window load event to keep the page load performant
+            // Use the window load event to keep the page load performant
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js');
             });

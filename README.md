@@ -18,7 +18,7 @@ This project requires you to build out a travel app that, at a minimum, obtains 
 ## Testing
 
 For testing you need to run the express server by run , `npm run start`, and then run `npm run test`  Tests fail otherwise.
-![Test screenshoot](testing.gpngif)
+![Test screenshoot](testing.gif)
 
 ## Development environment
 
